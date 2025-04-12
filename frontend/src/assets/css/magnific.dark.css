@@ -1,0 +1,164 @@
+/* Dark Mode CSS */
+.dyscoverAI-dark {
+	background: var(--dark-bg);
+}
+
+/* Fixing highlighted text in dark mode */
+.dyscoverAI-dark .highlight,
+.dyscoverAI-dark .highlight * {
+    background: var(--dark-highlight-bg) !important;
+    color: var(--dark-text) !important;
+    padding: 4px 6px;
+    border-radius: 4px;
+}
+
+/* Dark mode fixes for the navigation bar */
+.dyscoverAI-dark .header-container {
+    background: var(--dark-bg) !important;
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.dyscoverAI-dark .header-container .main-navigation ul > li > a {
+    color: var(--dark-text) !important;
+}
+
+.dyscoverAI-dark .header-container .main-navigation ul > li > a:hover {
+    color: var(--accent-color-old) !important;
+}
+
+/* Ensure the sticky header also adapts */
+.dyscoverAI-dark .header-container.sticky {
+    background: var(--dark-bg) !important;
+}
+
+/* Navbar Dark Mode */
+.dyscoverAI-dark .navbar-dark {
+	background: var(--dark-bg) !important;
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.dyscoverAI-dark .navbar-dark .navbar-nav .nav-link {
+	color: var(--dark-text) !important;
+}
+
+.dyscoverAI-dark .navbar-dark .navbar-nav .nav-link:hover {
+	color: var(--accent-color-old) !important;
+}
+
+.dyscoverAI-dark .navbar-dark .navbar-brand {
+	color: var(--dark-text) !important;
+}
+
+.dyscoverAI-dark .navbar-dark .navbar-toggler {
+	border-color: var(--dark-border);
+}
+
+.dyscoverAI-dark .navbar-dark .navbar-toggler-icon {
+	background-color: var(--dark-text);
+}
+
+/* Fixing "Learn More" dropdown in dark mode */
+.dyscoverAI-dark .dropdown-toggle::after {
+    color: var(--dark-text) !important;
+}
+
+/* Fixing dropdown menu */
+.dyscoverAI-dark .dropdown-menu {
+    background: var(--dark-bg) !important;
+    border: 1px solid var(--dark-border);
+}
+
+.dyscoverAI-dark .dropdown-menu .dropdown-item {
+    color: var(--dark-text) !important;
+}
+
+.dyscoverAI-dark .dropdown-menu .dropdown-item:hover {
+    background: var(--dark-hover-bg) !important;
+}
+
+/* Fixing sub-menu dropdown */
+.dyscoverAI-dark .dropdown-submenu .dropdown-menu {
+    background: var(--dark-bg) !important;
+    border: 1px solid var(--dark-border);
+}
+
+.dyscoverAI-dark .dropdown-submenu .dropdown-item {
+    color: var(--dark-text) !important;
+}
+
+.dyscoverAI-dark .dropdown-submenu .dropdown-item:hover {
+    background: var(--dark-hover-bg) !important;
+}
+
+/* Fix Login button */
+.dyscoverAI-dark .header-nav-box .right-nav-controls .login-button {
+    color: var(--dark-text) !important;
+    background: transparent !important;
+}
+
+/* Home Area */
+.dyscoverAI-dark .home-area .title {
+	color: var(--dark-text);
+}
+
+.dyscoverAI-dark .home-area p {
+	color: var(--dark-text);
+}
+
+.dyscoverAI-dark .home-area .span {
+	color: var(--dark-text);
+}
+
+/* FAQ & Pricing */
+.dyscoverAI-faq-area-dark.dyscoverAI-faq-area,
+.dyscoverAI-pricing-area-dark.dyscoverAI-pricing-area {
+	background: var(--dark-bg);
+}
+
+.dyscoverAI-pricing-area-dark .dyscoverAI-section-title p,
+.dyscoverAI-pricing-area-dark .dyscoverAI-section-title .dyscoverAI-title {
+	color: var(--dark-text);
+}
+
+/* FAQ */
+.dyscoverAI-faq-area-dark .dyscoverAI-section-title p,
+.dyscoverAI-faq-area-dark .dyscoverAI-section-title .dyscoverAI-title {
+	color: var(--dark-text);
+}
+
+.dyscoverAI-faq-area-dark .faq-accrodion .accrodion {
+	background: var(--dark-secondary-bg);
+}
+
+.dyscoverAI-faq-area-dark .faq-accrodion .accrodion .accrodion-inner {
+	border-color: var(--dark-border);
+	background: var(--dark-secondary-bg);
+}
+
+.dyscoverAI-faq-area-dark .faq-accrodion .accrodion .accrodion-content p,
+.dyscoverAI-faq-area-dark .faq-accrodion .accrodion .accrodion-title h4 {
+	color: var(--dark-text);
+}
+
+/* Footer */
+.dyscoverAI-footer-area-dark {
+	background: var(--dark-bg);
+}
+
+.dyscoverAI-footer-area-dark .footer-about-widget a,
+.dyscoverAI-footer-area-dark .footer-about-widget p {
+	color: var(--dark-text);
+}
+
+.dyscoverAI-footer-area-dark .footer-navigation ul li a{
+	color: var(--dark-text);
+}
+
+.dyscoverAI-footer-area-dark .footer-navigation ul li a:hover {
+	/* color: var(--accent-color-old); */
+	color: var(--accent-color);
+}
+
+.dyscoverAI-footer-area-dark .footer-copyright .copyright-text p {
+	color: var(--dark-text);
+}

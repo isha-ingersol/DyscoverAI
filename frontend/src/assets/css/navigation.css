@@ -1,0 +1,12 @@
+.main-navigation ul > li .sub-menu > li:hover > a {
+    color: var(--light-text);
+    background-color: var(--primary-color);
+    border-radius: 4px;
+  }
+
+
+  /* .main-navigation span:hover > a {
+    color: var(--light-text);
+    background-color: var(--primary-color);
+    border-radius: 4px;
+  } */

@@ -1,0 +1,124 @@
+/* Learn More Section */
+.learnmore-area {
+    background: var(--light-bg);
+    padding: 150px 0 80px;
+}
+
+/* Title Styling */
+.section-title {
+    text-align: left;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    font-weight: 700;
+    color: var(--light-text);
+    margin-bottom: 10px;
+}
+
+/* Types Container */
+.types-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 50px;
+}
+
+/* Type Text */
+.learnmore-type h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dark-text);
+}
+
+/* Type Text */
+.learnmore-type h4 {
+    font-size: 18px;
+    font-weight: 400;
+    /* color: var(--primary-color); */
+    color: var(--dark-text);
+    margin-top: 20px;
+}
+
+.learnmore-type span {
+    /* background-color: var(--secondary-color); */
+    color: var(--dark-text);
+    padding: 3px 3px;
+    border-radius: 4px;
+    display: inline;
+    font-weight: bold;
+}
+
+/* Type Box */
+.learnmore-type {
+    background: var(--accent-color);
+    border-radius: 12px;
+    padding: 40px 30px 25px;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Left-align text */
+    text-align: left; /* Ensure text is left-aligned */
+}
+
+/* Learn More Button */
+.learnmore-button {
+    display: inline-block;
+    font-weight: 500;
+    text-align: center; /* Keeps text inside the button centered */
+    user-select: none;
+    border: 1px solid var(--primary-color);
+    background-color: var(--primary-color);
+    padding: 0 30px;
+    font-size: 15px;
+    line-height: 45px;
+    border-radius: 6px;
+    color: var(--light-text);
+    cursor: pointer;
+    transition: all 0.4s ease-out 0s;
+}
+
+.learnmore-button:hover {
+    color: var(--light-text);
+    transform: translateY(-7px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.learnmore-button i {
+    height: 26px;
+    width: 26px;
+    text-align: center;
+    line-height: 26px;
+    font-size: 14px;
+}
+
+
+
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+    .types-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .learnmore-type {
+        width: 80%;
+        align-items: flex-start; /* Ensure left alignment on smaller screens */
+    }
+}
+
+@media (max-width: 767px) {
+    .section-title {
+        text-align: center;
+    }
+
+    .types-container {
+        gap: 30px;
+    }
+
+    .learnmore-type {
+        width: 90%;
+    }
+}

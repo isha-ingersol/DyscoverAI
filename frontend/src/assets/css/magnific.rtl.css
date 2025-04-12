@@ -1,0 +1,84 @@
+/*==== rtl css ====*/
+
+
+
+.dyscoverAI-traffic-area.dyscoverAI-traffic-area-rtl .traffic-thumb {
+	left: 0;
+	right: auto;
+	transform: translateY(-50%) rotateY(-180deg);
+}
+
+
+.dyscoverAI-traffic-area-rtl .dyscoverAI-traffic-title{
+	padding-left: 220px;
+	padding-right: 0;
+}
+
+
+.dyscoverAI-traffic-area-rtl .dyscoverAI-traffic-service .icon{
+	right: 0;
+	left: auto;
+}
+
+
+
+.dyscoverAI-faq-area-rtl .faq-accrodion .accrodion .accrodion-title::after,
+.dyscoverAI-faq-area-rtl .faq-accrodion .accrodion .accrodion-title::before{
+	right: auto;
+	left: 30px;
+}
+
+
+.dyscoverAI-project-area.dyscoverAI-project-area-rtl .dyscoverAI-project-box .dyscoverAI-project-thumb{
+	left: 70px;
+	right: auto;
+}
+
+
+
+.dyscoverAI-project-area-rtl .dyscoverAI-project-content .input-box input{
+	padding-left: 0;
+	padding-right: 30px;
+}
+
+
+.dyscoverAI-project-area-rtl .dyscoverAI-project-content .input-box button{
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+
+
+
+
+.header-container-rtl .main-navigation ul{
+	text-align: right;
+}
+
+
+
+
+
+.header-container-rtl .main-navigation ul > li .sub-menu{
+	text-align: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

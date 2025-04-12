@@ -1,0 +1,16 @@
+:root {
+    /* Light Mode Colors */
+    --light-bg: #f6f4e8;
+    --light-text: #333333;
+    --light-subtext: #505056;
+
+    /* Dark Mode Colors */
+    --dark-bg: #292E3C;
+    --dark-text: #eeeeee;
+    --dark-default-text: #f6f4e8;
+
+    /* Accent Colours */
+    --primary-color: #d4eaef;
+    --secondary-color: #1995AD;
+    --accent-color: #0fa3ae;
+}

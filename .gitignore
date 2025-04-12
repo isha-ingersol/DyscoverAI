@@ -1,12 +1,16 @@
 # Ignore everything
 *
 
-
+# Allow backend and frontend folders and all their contents
 !backend/
+!backend/**
 !frontend/
-!.gitignore
+!frontend/**
 
-
-.DS_Store
+# Still ignore secrets or system files inside those folders
 backend/.env
 frontend/.env
+.DS_Store
+
+# Allow the .gitignore file itself
+!.gitignore

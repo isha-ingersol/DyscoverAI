@@ -1,0 +1,344 @@
+.home-area {
+    padding-top: 200px;
+    padding-bottom: 60px;
+    overflow: hidden;
+    position: relative;
+    z-index: 10;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background: var(--light-bg);
+}
+
+.home-area .home-content {
+    margin-bottom: -110px;
+}
+
+.home-content {
+    margin-top: -125px;
+}
+
+.home-area .home-content .title {
+    font-weight: 600;
+    font-size: 60px;
+    line-height: 80px;
+}
+
+.home-content>span {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.home-content .title {
+    font-size: 60px;
+    line-height: 70px;
+    margin-top: 10px;
+    margin-bottom: 22px;
+}
+
+.home-content p {
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.home-content ul {
+    margin: 41px 0 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.home-content ul li {
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.home-content ul li a {
+    background: var(--primary-color);
+    color: var(--light-text);
+    line-height: 40px;
+    padding: 0 23px;
+    border-radius: 6px;
+    border: 2px solid var(--primary-color);
+}
+
+.home-content ul li a i {
+    padding-right: 6px;
+}
+
+.home-content ul li a:hover {
+    /* background: transparent; */
+    color: var(--light-text);
+
+    transform: translateY(-7px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.home-content {
+    padding-right: 40px;
+}
+
+.title {
+    font-size: 64px;
+    line-height: 70px;
+    font-weight: 400;
+    margin-top: 15px;
+}
+
+.title span {
+    font-weight: 900;
+}
+
+.home-content .title span {
+    background-color: var(--primary-color);
+    padding: 0px 6px;
+    border-radius: 4px;
+    color: var(--light-text);
+}
+
+/* .home-area img {
+    max-width: 90%;
+    height: auto;
+} */
+
+
+.home-image-container img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Reduce Image Size for Tablets */
+@media (max-width: 991px) {
+    .home-image-container img {
+        max-width: 70%;
+    }
+}
+
+/* Further Reduce Image Size for Mobile Screens */
+@media (max-width: 767px) {
+    .home-image-container img {
+        max-width: 50%;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .home-area.home-content .title {
+        font-size: 54px;
+        line-height: 64px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .home-area.home-content .title {
+        font-size: 50px;
+        line-height: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-area.home-content .title {
+        font-size: 36px;
+        line-height: 46px;
+        padding: 0;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .home-area.home-content .title {
+        font-size: 46px;
+        line-height: 56px;
+        padding: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-area.home-content {
+        display: none;
+        margin-bottom: 0;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .home-area.home-content {
+        display: block;
+        margin-bottom: -210px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .home-area {
+        padding-top: 120px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .home-area {
+        padding-top: 160px;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-area {
+        padding-top: 120px;
+        padding-bottom: 100px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .home-area {
+        padding-top: 120px;
+        padding-bottom: 0px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .home-area .home-content .title {
+        font-size: 50px;
+        line-height: 60px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .home-area .home-content .title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-area .home-content .title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .home-area .home-content .title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .home-content {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-content {
+        margin-bottom: 50px;
+        text-align: center;
+    }
+}
+
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .home-content .title {
+        font-size: 48px;
+        line-height: 58px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .home-content .title {
+        font-size: 48px;
+        line-height: 58px;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-content .title {
+        font-size: 28px;
+        line-height: 38px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .home-content .title {
+        font-size: 36px;
+        line-height: 46px;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-content p {
+        font-size: 15px;
+        line-height: 26px;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-content ul li {
+        margin-bottom: 20px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .home-content ul li {
+        margin-bottom: 0px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .home-content {
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 767px) {
+    .home-content {
+        padding-right: 0;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1200px) {
+    .title {
+        font-size: 50px;
+        line-height: 50px;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .title {
+        font-size: 50px;
+        line-height: 60px;
+    }
+}
+
+@media (max-width: 767px) {
+    .title {
+        font-size: 30px;
+        line-height: 40px;
+    }
+}
+
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+    .title {
+        font-size: 40px;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+    .input-box {
+        width: 100%;
+    }
+}
