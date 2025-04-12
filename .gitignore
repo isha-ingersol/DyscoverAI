@@ -1,0 +1,12 @@
+# Ignore everything
+*
+
+
+!backend/
+!frontend/
+!.gitignore
+
+
+.DS_Store
+backend/.env
+frontend/.env
