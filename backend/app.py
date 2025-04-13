@@ -25,7 +25,7 @@ print("✅ Dyslexia model loaded and compiled!")
 
 
 # Load Dysgraphia Model
-DYS_GRAPHIA_MODEL_PATH = "best_svm_model.pkl"
+DYS_GRAPHIA_MODEL_PATH = "dysgraphia_model.pkl"
 if not os.path.exists(DYS_GRAPHIA_MODEL_PATH):
     raise FileNotFoundError(f"❌ Dysgraphia model not found: {DYS_GRAPHIA_MODEL_PATH}")
 print("🟡 Loading Dysgraphia model...")
