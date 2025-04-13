@@ -6,6 +6,8 @@
 !backend/**
 !frontend/
 !frontend/**
+!screenshots/
+!screenshots/**
 
 # Still ignore secrets or system files inside those folders
 backend/.env
