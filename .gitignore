@@ -8,6 +8,8 @@
 !frontend/**
 !screenshots/
 !screenshots/**
+!requirements.txt
+!README.md
 
 # Still ignore secrets or system files inside those folders
 backend/.env
