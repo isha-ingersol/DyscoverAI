@@ -76,3 +76,9 @@ Refer to **Appendix G** in the final report for:
 - Accessibility highlights  
 - Terminal logs and backend logic  
 - Git commit history
+
+---
+
+## Project Demonstration
+
+▶️ [Watch this demo video for more!](./demo/Final-Year-Project-Demonstration.mp4)
