@@ -2,17 +2,17 @@
 *
 
 # Allow backend and frontend folders and all their contents
-!backend/
-!backend/**
-!frontend/
-!frontend/**
-!screenshots/
-!screenshots/**
-!demo/
-!demo/**
+# !backend/
+# !backend/**
+# !frontend/
+# !frontend/**
+# !screenshots/
+# !screenshots/**
+# !demo/
+# !demo/**
 
-!requirements.txt
-!README.md
+# !requirements.txt
+# !README.md
 
 # Still ignore secrets or system files inside those folders
 backend/.env
@@ -20,4 +20,4 @@ frontend/.env
 .DS_Store
 
 # Allow the .gitignore file itself
-!.gitignore
+# !.gitignore

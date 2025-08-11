@@ -81,4 +81,4 @@ Refer to **Appendix G** in the final report for:
 
 ## Project Demonstration
 
-▶️ [Watch this demo video for more!](./demo/Final-Year-Project-Demonstration.mp4)
+▶️ [Watch this demo video for more!](./demo/DyscoverAI-Demonstration.mp4)
