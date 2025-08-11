@@ -2,12 +2,12 @@
 *
 
 # Allow backend and frontend folders and all their contents
-# !backend/
-# !backend/**
-# !frontend/
-# !frontend/**
-# !screenshots/
-# !screenshots/**
+!backend/
+!backend/**
+!frontend/
+!frontend/**
+!screenshots/
+!screenshots/**
 !demo/
 !demo/**
 
