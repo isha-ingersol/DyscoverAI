@@ -8,8 +8,8 @@
 # !frontend/**
 # !screenshots/
 # !screenshots/**
-# !demo/
-# !demo/**
+!demo/
+!demo/**
 
 # !requirements.txt
 # !README.md
