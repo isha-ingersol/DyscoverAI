@@ -17,6 +17,7 @@
 # Still ignore secrets or system files inside those folders
 backend/.env
 frontend/.env
+database/users.csv
 .DS_Store
 
 # Allow the .gitignore file itself

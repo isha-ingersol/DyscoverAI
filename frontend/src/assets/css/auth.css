@@ -1,0 +1,97 @@
+@import './colours.css';
+@import './default.css';
+
+/* Full-page wrapper */
+.auth-page-wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--light-bg); /* Light mode by default */
+}
+
+/* Dark mode support */
+.auth-page-wrapper.dark {
+    background-color: var(--dark-bg);
+}
+
+/* Card/container */
+.auth-container {
+    max-width: 400px;
+    width: 90%;
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: var(--primary-color); /* Or var(--card-bg) if you prefer */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Title */
+.auth-title {
+    text-align: center;
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    color: var(--light-text);
+}
+
+/* Form styling */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--light-subtext);
+}
+
+.auth-input {
+    padding: 0.8rem;
+    margin-bottom: 1.2rem;
+    border: 1px solid var(--secondary-color);
+    border-radius: 0.5rem;
+    background-color: var(--light-bg);
+    color: var(--light-text);
+    font-size: 1rem;
+}
+
+.auth-input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 2px rgba(15, 163, 174, 0.2);
+}
+
+/* Button */
+.auth-button {
+    background-color: var(--accent-color);
+    color: var(--light-text);
+    padding: 0.9rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.auth-button:hover {
+    background-color: var(--secondary-color);
+}
+
+/* Switch link */
+.auth-switch {
+    text-align: center;
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+    color: var(--light-subtext);
+}
+
+.auth-switch a {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.auth-switch a:hover {
+    text-decoration: underline;
+}

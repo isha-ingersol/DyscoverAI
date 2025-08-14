@@ -3,46 +3,48 @@ import Main from "./components/index.jsx";
 import Error from "./components/error.jsx";
 import Layout from "./components/Layout.jsx";
 import AssessmentComponent from "./components/Assessments/Assessment.jsx";
-import AboutPage from "./components/About.jsx"
+import Login from "./components/Login.jsx";
+import Signup from "./components/Signup.jsx";
+import ProtectedRoute from "./components/ProtectedRoute.jsx";
 
-const router = createBrowserRouter([
-  {
-    path: '/',
-    Component: Layout,
-    children: [
-      {
-        index: true,
-        element: <Main />
-      },
-      {
-        path: "/how-it-works",
-        element: <Main />
-      },
-      {
-        path: "/learn-more",
-        element: <Main />
-      },
-      {
-        path: "/assessment",
-        element: <AssessmentComponent />
-      },
-      {
-        path: "/about",
-        element: <Main />
-      },
-      {
-        path: "/error",
-        element: <Error />
-      },
-      {
-        path: "*",
-        element: <Error />
-      },
-    ]
-  }
-]);
+const createRouter = (isLoggedIn, setIsLoggedIn) =>
+  createBrowserRouter([
+    {
+      path: "/",
+      Component: Layout,
+      children: [
+        { index: true, element: <Main /> },
+        { path: "/how-it-works", element: <Main /> },
+        { path: "/learn-more", element: <Main /> },
+        { path: "/about", element: <Main /> },
 
-function Router() {
+        {
+          path: "/assessment",
+          element: (
+            <ProtectedRoute isLoggedIn={isLoggedIn}>
+              <AssessmentComponent />
+            </ProtectedRoute>
+          ),
+        },
+
+        {
+          path: "/login",
+          element: <Login setIsLoggedIn={setIsLoggedIn} />,
+        },
+
+        {
+          path: "/signup",
+          element: <Signup />,
+        },
+
+        { path: "/error", element: <Error /> },
+        { path: "*", element: <Error /> },
+      ],
+    },
+  ]);
+
+function Router({ isLoggedIn, setIsLoggedIn }) {
+  const router = createRouter(isLoggedIn, setIsLoggedIn);
   return <RouterProvider router={router} />;
 }
 

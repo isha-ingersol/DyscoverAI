@@ -77,7 +77,7 @@ function NavBar({
                                         {langEnabled ? "RTL" : "LTR"}
                                     </span>
                                 )}
-                                <Link className="login-button" to="#">Login</Link>
+                                <Link className="login-button" to="/login">Login</Link>
                                 <Link to="/assessment" className="start-assessment-button ml-30">Start Free Assessment</Link>
                                 <div onClick={action} className="mobile-menu-toggle ml-30 canvas_open d-lg-none d-block">
                                     <i className="menu-icon fa fa-bars"></i>

@@ -1,160 +1,204 @@
-/* Ensure styles are scoped to the assessment page */
-.assessment-container {
-  padding-top: 80px; /* Prevents navbar overlap */
+/* ---------- Assessment Page Wrapper ---------- */
+.auth-page-wrapper {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  padding: 80px 20px 20px 20px; /* top padding prevents navbar overlap */
   background-color: var(--light-bg);
 }
 
-/* Styles for the main file upload container */
-.assessment-container .container {
-  height: 300px;
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.2);
+/* ---------- Assessment Form ---------- */
+.assessment-form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  gap: 5px;
-  background-color: rgba(0, 110, 255, 0.041);
+  width: 400px;
+  max-width: 90%;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--primary-color);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+  gap: 15px;
 }
 
-/* Header section */
-.assessment-container .header {
-  flex: 1;
+.assessment-form h2 {
+  margin-bottom: 10px;
+  color: var(--light-text);
+  text-align: center;
+}
+
+.assessment-form .upload-note {
+  font-size: 0.95rem;
+  color: var(--light-text);
+  text-align: center;
+}
+
+/* File input label styling */
+.assessment-form label.file-label {
   width: 100%;
+  padding: 15px;
   border: 2px dashed royalblue;
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-/* SVG inside header */
-.assessment-container .header svg {
-  height: 100px;
-}
-
-/* Header text */
-.assessment-container .header p {
   text-align: center;
-  color: black;
-}
-
-/* Footer (file select button) */
-.assessment-container .footer {
-  background-color: rgba(0, 110, 255, 0.075);
-  width: 100%;
-  height: 40px;
-  padding: 8px;
-  border-radius: 10px;
   cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  color: black;
-  border: none;
+  background-color: rgba(0, 110, 255, 0.04);
+  color: var(--dark-text);
 }
 
-/* Icons inside the footer */
-.assessment-container .footer svg {
-  height: 130%;
-  fill: royalblue;
-  background-color: rgba(70, 66, 66, 0.103);
-  border-radius: 50%;
-  padding: 2px;
-  cursor: pointer;
-  box-shadow: 0 2px 30px rgba(0, 0, 0, 0.205);
+.assessment-form label.file-label p {
+  margin: 0;
+  font-size: 0.95rem;
 }
 
-/* Footer text */
-.assessment-container .footer p {
-  flex: 1;
-  text-align: center;
-}
-
-/* Hide the file input */
-.assessment-container #file {
+/* Hide the actual file input */
+.assessment-form input#file {
   display: none;
 }
 
-/* ✅ Mobile Responsiveness */
-@media (max-width: 600px) {
-  .assessment-container {
-    padding-top: 100px; /* Increase padding for small screens */
-  }
-
-  .assessment-container .container {
-    width: 90%;
-    height: auto;
-    padding: 15px;
-  }
-
-  .assessment-container .header svg {
-    height: 80px;
-  }
-
-  .assessment-container .footer {
-    height: 50px;
-    padding: 10px;
-  }
+/* Upload button */
+.assessment-form button {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--dark-text);
+  transition: 0.2s ease;
 }
 
+.assessment-form button:hover:not(:disabled) {
+  background-color: var(--accent-color);
+}
 
+.assessment-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
 
-
-
-/********** Pop-up CSS **********/
-.popup-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
+/* Prediction Results */
+.assessment-form .results {
+  margin-top: 15px;
   width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background-color: var(--light-bg);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.popup-content {
-  background-color: var(--light-bg);
+.assessment-form .results h3 {
+  margin-bottom: 10px;
   color: var(--light-text);
-  padding: 20px;
+}
+
+.assessment-form .results p {
+  margin: 5px 0;
+  font-weight: 500;
+  color: var(--light-text);
+}
+
+/* ---------- Pop-up / Disclaimer ---------- */
+.disclaimer-popup, .popup-overlay, .popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.disclaimer-popup {
+  padding: 30px;
+  background-color: var(--light-bg);
   border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
   text-align: center;
   width: 400px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 90%;
 }
 
 .popup-buttons {
   margin-top: 20px;
   display: flex;
   justify-content: space-around;
+  width: 100%;
 }
 
 .popup-buttons button {
   padding: 10px 20px;
+  border-radius: 8px;
   border: none;
   cursor: pointer;
-  font-size: 16px;
-  border-radius: 5px;
+  font-size: 1rem;
+  transition: 0.2s ease;
 }
 
 .popup-buttons button:first-child {
-  /* background-color: #4CAF50; */
   background-color: var(--primary-color);
   color: green;
 }
 
 .popup-buttons button:last-child {
-  /* background-color: #f44336; */
   background-color: var(--primary-color);
   color: red;
+}
+
+.popup-buttons button:hover {
+  opacity: 0.85;
+}
+
+/* ---------- Login Prompt ---------- */
+.login-prompt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 25px;
+  border-radius: 10px;
+  width: 350px;
+  background-color: var(--light-bg);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.login-prompt h2 {
+  margin-bottom: 15px;
+  color: var(--dark-text);
+}
+
+.login-prompt p {
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  color: var(--light-text);
+}
+
+.login-prompt a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.login-prompt a:hover {
+  text-decoration: underline;
+}
+
+/* ---------- Mobile Responsiveness ---------- */
+@media (max-width: 600px) {
+  .auth-page-wrapper {
+    padding-top: 100px;
+  }
+
+  .assessment-form {
+    width: 90%;
+    padding: 20px;
+    gap: 10px;
+  }
+
+  .assessment-form label.file-label {
+    padding: 10px;
+  }
+
+  .popup-buttons {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

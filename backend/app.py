@@ -1,14 +1,75 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
+import csv
+import os
 import numpy as np
 import cv2
 import tensorflow as tf
 import joblib
-import os
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS
 
+# ---------- USER AUTH (CSV storage) ----------
+USERS_CSV = "database/users.csv"
+os.makedirs(os.path.dirname(USERS_CSV), exist_ok=True)
+
+# Ensure CSV has headers
+if not os.path.exists(USERS_CSV):
+    with open(USERS_CSV, mode="w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["first_name", "last_name", "email", "password"])
+
+
+
+@app.route("/register", methods=["POST"])
+def register():
+    data = request.get_json()
+    first_name = data.get("first_name")
+    last_name = data.get("last_name")
+    email = data.get("email")
+    password = data.get("password")
+
+    if not all([first_name, last_name, email, password]):
+        return jsonify({"success": False, "message": "All fields are required"}), 400
+
+    # Check if email already exists
+    with open(USERS_CSV, mode="r", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if row["email"] == email:
+                return jsonify({"success": False, "message": "Email already registered"}), 400
+
+    # Append new user to CSV (plain text password)
+    with open(USERS_CSV, mode="a", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow([first_name, last_name, email, password])
+
+
+    return jsonify({"success": True, "message": "Registration successful"})
+
+
+@app.route("/login", methods=["POST"])
+def login():
+    data = request.get_json()
+    email = data.get("email")
+    password = data.get("password")
+
+    if not all([email, password]):
+        return jsonify({"success": False, "message": "Email and password are required"}), 400
+
+    with open(USERS_CSV, mode="r", newline="") as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            if row["email"] == email:
+                if row.get("password") == password:
+                    return jsonify({"success": True, "message": "Login successful"})
+                else:
+                    return jsonify({"success": False, "message": "Incorrect password"}), 401
+
+    return jsonify({"success": False, "message": "Email not found"}), 404
+
+# ---------- IMAGE PREDICTION ----------
 # Load Best Dyslexia Model
 DYSLEXIA_MODEL_PATH = "dyslexia_model.keras"
 if not os.path.exists(DYSLEXIA_MODEL_PATH):
@@ -97,5 +158,6 @@ def predict():
         print(f"🚨 Error processing image: {str(e)}")
         return jsonify({"error": f"Processing error: {str(e)}"}), 500
 
+# Start Server
 if __name__ == '__main__':
     app.run(debug=True, host='127.0.0.1', port=5000)

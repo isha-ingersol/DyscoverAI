@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import useToggle from '../Hooks/useToggle.js';
 import BackToTop from './BackToTop.jsx';
 import LearnMore from './LearnMore.jsx';
-import FooterHome from './Footer.jsx';
+// import FooterHome from './Footer.jsx';
 import Home from './Home.jsx';
 import NavBar from './NavBar.jsx';
 import HowItWorks from './HowItWorks.jsx';
@@ -82,7 +82,7 @@ function Main() {
             {/* <AssessmentComponent id="assessment" className={darkMode ? 'darkmode-assessment' : ''} /> */}
             <LearnMore id="learn-more" className={darkMode ? 'darkmode-learnmore' : ''} />
             <AboutPage id="about" className={darkMode ? 'darkmode-about' : ''} />
-            <FooterHome className={darkMode ? 'darkmode-footer' : ''} />
+            {/* <FooterHome className={darkMode ? 'darkmode-footer' : ''} /> */}
             <BackToTop />
         </>
     );
