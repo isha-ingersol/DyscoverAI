@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "backend": "cd ../backend && source ../venv/bin/activate && python3 app.py",
+    "backend": "cd ../backend && python3 app.py",
     "frontend": "vite",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\""
   },
